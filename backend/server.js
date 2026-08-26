@@ -16,7 +16,13 @@ const companyRoutes = require('./routes/companyRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://job-portal-81hn.vercel.app',
+    'http://localhost:3000'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
