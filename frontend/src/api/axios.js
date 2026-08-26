@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://job-portal-seven-blond.vercel.app/'
+  baseURL: process.env.REACT_APP_API_URL || 'https://job-portal-seven-blond.vercel.app/api'
 });
 
 // Attach JWT token to every request if present
